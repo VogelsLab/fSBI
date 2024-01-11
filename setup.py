@@ -2,7 +2,7 @@
 
 from setuptools import find_packages, setup
 
-package_name = "fSBI"
+package_name = "synapsbi"
 version = "1.0"
 exclusions = ["notebooks", "sbi-logs"]
 
