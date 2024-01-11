@@ -1,27 +1,33 @@
 # fSBI
-Companion code to Confavreux*, Ramesh*, Goncalves, Macke* & Vogels*, NeurIPS 2023, Meta-learning families of plasticity rules in recurrent spiking networks using simulation-based inference
+Companion code to Confavreux*, Ramesh*, Goncalves, Macke* & Vogels*, NeurIPS 2023, *Meta-learning families of plasticity rules in recurrent spiking networks using simulation-based inference*  
 https://openreview.net/forum?id=FLFasCFJNo
 ___
 
 ### Tutorial:
 Go through the notebooks:
-- Fit_posterior
-- Sample_from_posterior
-- Simulate_samples
-- Compute_metrics
-- Analysis
+- `Fit_posterior.ipynb`
+- `Sample_from_posterior.ipynb`
+- `Simulate_samples.ipynb`
+- `Compute_metrics.ipynb`
+- `Analysis/example.ipynb`
 
-### Checklist before you start the tutorials:
-- set-up the python library with all the dependencies (see setup.py).
-- install and test auryn (see the relevant subsection).
-- go to tasks_configs/ and change the "auryn_sim_dir" and "workdir" inside the 2 yaml files (where auryn will write the output spike trains for simulations on local hardware).
-- compile the c++ network simulations in cpp-simulator (tutorial missing rn).
+### Checklist before you start the tutorial:
+- Set-up the repo (see `setup.py`).
+- Install and test Auryn (see the relevant subsection).
+- Go to tasks_configs/ and change the "auryn_sim_dir" and "workdir" inside the 2 yaml files (where auryn will write the output spike trains for simulations on local hardware).
+- Compile the Auryn network simulations (tutorial missing rn).
 
 ### Installing Auryn:
-All spiking network simulations use Auryn, a fast, C++ simulator developped by Friedemann Zenke.
+All spiking network simulations in this repo use Auryn, a fast, C++ simulator developped by Friedemann Zenke.
 To install, please refer to https://fzenke.net/auryn/doku.php?id=start
+Note that installing Auryn with MPI support is not required for the tutorial.
+
+### Installing Auryn:
+- Compile the auryn simulations `sim_bg_IF_EEEIIEII_6pPol.cpp` and `sim_bg_CVAIF_EEIE_T4wvceciMLP.cpp` in `synapsbi/simulator/cpp_simulators/`, adapting the `Makefile` in the repo, you should only need to change AURYNPATH in the makefile.  
+For troubleshooting, refer to https://fzenke.net/auryn/doku.php?id=manual:compileandrunaurynsimulations
 
 ### Structure of data provided:
+The main data we release alongside this paper are 
 
 ### Metrics implemented and their names:
 
