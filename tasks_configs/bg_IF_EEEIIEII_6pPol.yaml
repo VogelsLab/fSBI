@@ -1,0 +1,39 @@
+lns: 60 # length_training
+ls: 10 # length_scoring
+auryn_sim_dir: "/home/bconfavr/Documents/fSBI/synapsbi/simulator/cpp_simulators/" #TO UPDATE: path to the auryn cpp executable
+workdir: "/home/bconfavr/Documents/fSBI/synapsbi/simulator/cpp_simulators/sim_workdir" #TO UPDATE FOR YOUR COMPUTER
+NE: 4096
+NI: 1024
+tau_ampa: 0.005
+tau_gaba: 0.01
+tau_nmda: 0.1
+ampa_nmda_ratio: 0.3
+wee: 0.1
+wei: 0.1
+wie: 1
+wii:  1
+wmax: 20
+sparseness: 0.1
+N_input: 5000
+sparseness_poisson: 0.05
+weight_poisson: 0.075
+max_rate_checker: 100
+tau_checker: 1
+eta: 0.01
+name: "sim_bg_IF_EEEIIEII_6pPol"
+n_recorded: 1000
+record_i: True
+n_recorded_i: 500
+n_bins_kl_isi: 100
+isi_lim_kl_isi: [0,1]
+bin_size_small: 0.001
+bin_size_medium: 0.01
+bin_size_big: 0.1
+window_view_auto_cov: 0.5
+bin_size_fft: 0.01
+con_type: ["ee","ei","ie","ii"]
+n_dim_params: 25
+prior_params:
+  low_lim: -2.
+  up_lim: 2.
+  theta_dim: 25
