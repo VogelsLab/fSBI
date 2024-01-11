@@ -3,7 +3,7 @@ import os
 import subprocess
 import torch
 import numpy as np
-from synapsbi.utils import read_monitor_spiketime_files, read_monitor_weights_files
+from fsbi.utils import read_monitor_spiketime_files, read_monitor_weights_files
 
 class Simulator_bg_IF_EEEIIEII_6pPol:
     """

@@ -6,7 +6,6 @@ from scipy.signal import correlate
 from scipy.fft import fft, fftfreq
 import sys
 import torch
-import spikeye.analyze as a
 import time
 import matplotlib.pyplot as plt
 
@@ -79,6 +78,7 @@ def condition():
             "r_nov": lambda x: np.logical_and(15 <= x, x <= 16),
             "std_fam": lambda x: np.logical_and(15 <= x, x <= 17),
             "ratio_nov_fam": lambda x: np.logical_and(0.12 <= x, x <= 0.5)}
+
 
 class ComputeMetrics:
     """Compute metrics given a simulation."""
@@ -275,7 +275,7 @@ class ComputeMetrics:
         f_blow = 0
         for key in self.weights.keys():
             if key != "t":
-                w_distr = a.get_w_distr(w_dict={"w": self.weights[key], "t": self.weights["t"]}, t_start=self.params["t_start_rec"], t_stop=self.params["t_stop_rec"])
+                w_distr = get_w_distr(w_dict={"w": self.weights[key], "t": self.weights["t"]}, t_start=self.params["t_start_rec"], t_stop=self.params["t_stop_rec"])
                 f_blow += np.sum([i == 0 or i == self.params["wmax"] for i in w_distr]) / len(w_distr)
         return (f_blow / (len(self.weights.keys()) - 1))
     
@@ -397,3 +397,10 @@ class ComputeMetrics:
     def ratio_nov_fam(self):
         self._check(["n_recorded", "lpt", "lt", "lb0", "lb1", "lp", "lb2"])
         return(self.r_nov - self.r_fam)/(self.r_fam+0.0001)
+
+def get_w_distr(w_dict=None, t_start=0, t_stop=60, n_bins=100, w_min=0, w_max=10):
+    # check that t_start and t_stop are legit
+    if t_start > w_dict['t'][-1] or t_stop < w_dict['t'][0]:
+        raise ValueError('t_start or t_stop are outside the recorded range')
+    valid_ts = [t_start<i<t_stop for i in w_dict['t']]
+    return(w_dict['w'][:, valid_ts].flatten())

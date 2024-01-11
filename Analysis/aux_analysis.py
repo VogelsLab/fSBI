@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import time
-from synapsbi.utils import apply_n_conditions
+from fsbi.utils import apply_n_conditions
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import torch
 from torch import nn

@@ -1,6 +1,6 @@
 """Job script to fit density estimator."""
-from synapsbi.analyse import ComputeMetrics, default_x, condition
-from synapsbi.analyse import ComputeMetrics
+from fsbi.analyse import ComputeMetrics, default_x, condition
+from fsbi.analyse import ComputeMetrics
 import numpy as np
 import h5py
 from typing import List

@@ -2,23 +2,22 @@
 
 from setuptools import find_packages, setup
 
-package_name = "synapsbi"
+package_name = "fsbi"
 version = "1.0"
 exclusions = ["notebooks", "sbi-logs"]
 
 _packages = find_packages(exclude=exclusions)
 
 _base = [
+    "torch",
     "numpy",
     "matplotlib",
     "scipy",
     "seaborn",
-    "sklearn",
-    "torch",
+    "scikit-learn",
     "pyyaml",
     "sbi",
     "tqdm",
-    "spikeye@git+https://github.com/VogelsLab/spikeye.git#egg=spikeye"
         ]
 
 setup(
