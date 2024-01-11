@@ -5,17 +5,17 @@ ___
 
 ### Tutorial:
 Go through the notebooks:
-1/ Fit_posterior
-2/ Sample_from_posterior
-3/ Simulate_samples
-4/ Compute_metrics
-5/ Analysis
+- Fit_posterior
+- Sample_from_posterior
+- Simulate_samples
+- Compute_metrics
+- Analysis
 
 ### Checklist before you start the tutorials:
-1/ set-up the python library with all the dependencies (see setup.py).
-2/ install and test auryn (see the relevant subsection).
-3/ go to tasks_configs/ and change the "auryn_sim_dir" and "workdir" inside the 2 yaml files (where auryn will write the output spike trains for simulations on local hardware).
-4/ compile the c++ network simulations in cpp-simulator (tutorial missing rn).
+- set-up the python library with all the dependencies (see setup.py).
+- install and test auryn (see the relevant subsection).
+- go to tasks_configs/ and change the "auryn_sim_dir" and "workdir" inside the 2 yaml files (where auryn will write the output spike trains for simulations on local hardware).
+- compile the c++ network simulations in cpp-simulator (tutorial missing rn).
 
 ### Installing Auryn:
 All spiking network simulations use Auryn, a fast, C++ simulator developped by Friedemann Zenke.
