@@ -1,5 +1,5 @@
 # fSBI
-Companion code to Confavreux*, Ramesh*, Goncalves, Macke* & Vogels*, NeurIPS 2023, *Meta-learning families of plasticity rules in recurrent spiking networks using simulation-based inference*  
+Companion code to Confavreux*, Ramesh*, Gonçalves, Macke* & Vogels*, NeurIPS 2023, *Meta-learning families of plasticity rules in recurrent spiking networks using simulation-based inference*  
 https://openreview.net/forum?id=FLFasCFJNo
 ___
 
@@ -12,18 +12,19 @@ Go through the notebooks:
 - `Analysis/example.ipynb`
 
 ### Checklist before you start the tutorial:
-- Set-up the repo (see `setup.py`).
-- Install and test Auryn (see the relevant subsection).
-- Go to tasks_configs/ and change the "auryn_sim_dir" and "workdir" inside the 2 yaml files (where auryn will write the output spike trains for simulations on local hardware).
-- Compile the Auryn network simulations (tutorial missing rn).
+- (Create a new conda virtual environment: e.g. https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html)
+- Set-up the repo and dependencies: `(sudo) python setup.py install`
+- Install and test Auryn (see below).
+- Go to tasks_configs/ and update `auryn_sim_dir` and `workdir` inside the 2 yaml files (these variables control where Auryn will write output spike trains).
+- Compile the Auryn network simulations (see below).
 
 ### Installing Auryn:
 All spiking network simulations in this repo use Auryn, a fast, C++ simulator developped by Friedemann Zenke.
 To install, please refer to https://fzenke.net/auryn/doku.php?id=start
 Note that installing Auryn with MPI support is not required for the tutorial.
 
-### Installing Auryn:
-- Compile the auryn simulations `sim_bg_IF_EEEIIEII_6pPol.cpp` and `sim_bg_CVAIF_EEIE_T4wvceciMLP.cpp` in `synapsbi/simulator/cpp_simulators/`, adapting the `Makefile` in the repo, you should only need to change AURYNPATH in the makefile.  
+### Compile Auryn simulations:
+Compile the auryn simulations `sim_bg_IF_EEEIIEII_6pPol.cpp` and `sim_bg_CVAIF_EEIE_T4wvceciMLP.cpp` located in `synapsbi/simulator/cpp_simulators/`. For this you adapting the `Makefile` in the repo, you should only need to change AURYNPATH in the makefile.  
 For troubleshooting, refer to https://fzenke.net/auryn/doku.php?id=manual:compileandrunaurynsimulations
 
 ### Structure of data provided:
