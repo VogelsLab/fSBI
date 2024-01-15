@@ -1,3 +1,12 @@
+# fSBI
+Companion code to Confavreux*, Ramesh*, Gonçalves, Macke* & Vogels*, NeurIPS 2023, *Meta-learning families of plasticity rules in recurrent spiking networks using simulation-based inference*  
+https://openreview.net/forum?id=FLFasCFJNo
+___
+### Checklist before starting the tutorial:
+- Set-up the repo and dependencies with `setup.py` (see section below for more details).
+- Install and test Auryn (see section below for more details).
+- Compile the Auryn network simulations (see section below for more details).
+
 ### Tutorial:
 Go through the notebooks:
 - 1/ `Fit_posterior.ipynb`
