@@ -25,7 +25,7 @@ Note: this may install a python version that is too recent for some of the depen
 
 ### Installing Auryn:
 All spiking network simulations in this repo use Auryn, a fast, C++ simulator developped by Friedemann Zenke.
-To install, please refer to https://fzenke.net/auryn/doku.php?id=start
+To install, please refer to https://fzenke.net/auryn/doku.php?id=start  
 Note that installing Auryn with MPI support is not required for the tutorial.
 
 ### Compile Auryn simulations:
