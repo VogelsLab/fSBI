@@ -20,7 +20,7 @@ Go through the notebooks:
 https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html
 - Install python, pip and setuptools: `conda install python`  
 Note: this may install a python version that is too recent for some of the dependencies (e.g. pytorch), in which case force install an earlier version: e.g. `conda install python=3.11`
-- Install fSBI with setup.py: `python3 -m pip install -e .`
+- Install fSBI with setup.py: move to fSBI directory + `python3 -m pip install -e .`
 - Install jupyter notebook and start the tutorial
 
 ### Installing Auryn:
@@ -34,7 +34,7 @@ For troubleshooting, refer to https://fzenke.net/auryn/doku.php?id=manual:compil
 - Go to tasks_configs/ and update `auryn_sim_dir` and `workdir` inside the 2 yaml files (these variables control where Auryn will write output spike trains).
 
 ### Structure of data provided:
-The main data release alongside this paper are all the plasticity rules we simulated to obtain the posteriors for generally plausible plasticity rules.
+The main data release alongside this paper are *all* the plasticity rules we simulated to obtain the posteriors for generally plausible plasticity rules (i.e. rules sampled from all posteriors along the filtering).
 - `data_synapsesbi/bg_IF_EEEIIEII_6pPol/bg_IF_EEEIIEII_6pPol_all.npy` are all the rules from the polynomial search space (Fig 2).
 - `data_synapsesbi/bg_CVAIF_EEIE_T4wvceciMLP/bg_CVAIF_EEIE_T4wvceciMLP_all.npy` are all the rules from the MLP search space (Fig 4).  
 
