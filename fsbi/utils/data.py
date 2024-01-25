@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import os
 from typing import Optional, List
-from tqdm import tqdm_notebook
+# from tqdm import tqdm_notebook
 
 
 def load_data_from_h5py(path_to_file: str):
@@ -210,7 +210,7 @@ def save_data_to_hdf5(
             h5_file = _create_h5_entry(h5_file, dat["id"], dat["theta"], dat)
 
     else: #need to fetch the auryn monitor files
-        for id, theta, output in tqdm_notebook(zip(seeds, thetas, outputs)):
+        for id, theta, output in zip(seeds, thetas, outputs):
 #         for id, theta, output in zip(seeds, thetas, outputs):
             if output < 0:  # simulation did not blow up, gather and store monitor files store spiketimes
                 spiketimes = read_monitor_spiketime_files(spiketimes_workdir, id, which="e", num_neurons=params['n_recorded'])

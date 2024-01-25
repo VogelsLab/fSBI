@@ -17,7 +17,6 @@ _base = [
     "scikit-learn",
     "pyyaml",
     "sbi",
-    "tqdm",
         ]
 
 setup(

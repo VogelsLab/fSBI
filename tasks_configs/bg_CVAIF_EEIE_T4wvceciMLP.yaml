@@ -1,7 +1,7 @@
 lns: 60 # length_training
 ls: 10 # length_scoring
-auryn_sim_dir: "/home/bconfavr/Documents/fSBI/synapsbi/simulator/cpp_simulators/" #TO UPDATE: path to the auryn cpp executable
-workdir: "/home/bconfavr/Documents/fSBI/synapsbi/simulator/cpp_simulators/sim_workdir" #TO UPDATE FOR YOUR COMPUTER
+auryn_sim_dir: "./fSBI/synapsbi/simulator/cpp_simulators/" #TO UPDATE: path to the auryn cpp executable
+workdir: "./fSBI/synapsbi/simulator/cpp_simulators/sim_workdir" #TO UPDATE FOR YOUR COMPUTER
 NE: 4096
 NI: 1024
 tau_ampa: 0.005
