@@ -3,6 +3,7 @@ Companion code to Confavreux*, Ramesh*, Gonçalves, Macke* & Vogels*, NeurIPS 20
 https://openreview.net/forum?id=FLFasCFJNo
 ___
 ### Checklist before starting the tutorial:
+- Have git lfs installed before cloning the repo (see https://git-lfs.com/)
 - Set-up the repo and dependencies with `setup.py` (see section below for more details).
 - Install and test Auryn (see section below for more details).
 - Compile the Auryn network simulations (see section below for more details).
